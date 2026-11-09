@@ -1,0 +1,141 @@
+@use "./variables.scss";
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0px;
+  outline: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+html,
+body,
+#root,
+.app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  background: var(--body-background);
+  overflow-x: hidden;
+}
+
+strong {
+  color: inherit;
+}
+
+.tosi-button {
+  background: var(--gradient-button-default);
+  background: var(--gradient-button);
+  color: var(--font-highlight);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--gradient-button-hover-default);
+    background: var(--gradient-button-hover);
+  }
+
+  &:disabled {
+    background: var(--gradient-button-disabled) !important;
+    cursor: initial;
+    opacity: 0.8;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.text-premium {
+  color: #ffd700;
+}
+
+.tooltip {
+  background: var(--font-highlight);
+  color: var(--primary);
+  visibility: hidden;
+}
+
+.tooltip-activator {
+  position: relative;
+
+  &:hover .tooltip {
+    visibility: visible;
+  }
+}
+
+.text {
+  color: var(--font-highlight);
+}
+
+.text-failure {
+  color: #fb6b25;
+}
+
+.text-success {
+  color: #4ecc48;
+}
+
+.text-inactive {
+  color: var(--font-inactive-color);
+}
+
+.text-twitter {
+  color: #1c9deb;
+}
+
+.text-discord {
+  color: #6f85d4;
+}
+
+.text-telegram {
+  color: #2ca0db;
+}
+
+.background {
+  background-color: var(--primary);
+}
+
+.background-see-through {
+  background-color: var(--primary-see-through);
+}
+
+.body-background {
+  background: var(--body-background);
+}
+
+.border-color {
+  border-color: var(--font-highlight);
+}
+
+.layover {
+  background: hsla(0, 0%, 4%, 0.86);
+}
+
+input {
+  &:disabled {
+    background: var(--input-disabled);
+  }
+}
+
+.border-selected {
+  border-color: var(--font-highlight);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
